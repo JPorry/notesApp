@@ -2,7 +2,7 @@
     baseUrl: ".",
     optimize: "uglify2",
     paths: {
-        jquery: 'libs/jquery-1.9.1.min',
+        jquery: 'libs/jquery-1.9.1',
 		underscore: 'libs/underscore-min',
 		backbone: 'libs/backbone',
 		backboneLocalstorage: 'libs/backbone.localStorage-min',

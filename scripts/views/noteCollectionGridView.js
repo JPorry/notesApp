@@ -1,11 +1,11 @@
 define([
-	'marionette', 'handlebars','views/noteItemView', 'events/eventAgregator'
+	'marionette', 'handlebars','views/noteItemGridView', 'events/eventAgregator'
 ], function(Marionette, Handlebars, myItemView, vent) {
 
 	var NoteCollectionView = Marionette.CollectionView.extend({
 	  itemView: myItemView,
 	  self: this,
-	  className: "notes",
+	  className: "notesGrid",
 	  initialize: function(){
 	  	this.listenTo(this.collection, "sort", this.render);
 	  	this.listenTo(this.collection, "remove", this.render);

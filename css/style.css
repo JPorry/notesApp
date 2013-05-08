@@ -58,22 +58,34 @@ section.addTool .insertListTool.inputText ul li input[type="text"]{padding: 10px
 section.addTool .insertListTool.inputText ul li input[type="text"]:focus{outline:none;}
 section.addTool .insertListTool.inputText a#pickColor{text-decoration: none; color:#ccc; position:relative; top:10px; left:530px;}
 
-section.notes{width:700px; margin:20px auto 0; padding:15px 15px 0;}
-section.notes article.note{transition: opacity 1s; -webkit-transition: opacity 1s;}
+section#chooseView{ width:700px; margin:0px auto; position: relative;}
+section#chooseView div{ position:absolute; top:-67px; left: 720px; width:60px; height: 30px;}
+section#chooseView div ul{ list-style: none; display: inline-block; width:60px; margin: 0; padding: 0;}
+section#chooseView div ul li{display:inline-block; width:30px; height:30px; margin:0; }
+section#chooseView div ul li a{display:inline-block; width: 30px; height: 30px; border: 1px solid #ccc; }
+section#chooseView div ul li a.list-view{background: url("../img/list.svg") #eee center no-repeat; border-right: none; border-radius: 1px 0 0 1px; }
+section#chooseView div ul li a.grid-view{background: url("../img/grid.svg") #eee center no-repeat; border-radius: 0 1px 1px 0;}
+section#chooseView div ul li a.active{background-color: #ddd; box-shadow:inset 0 0 1px rgba(0,0,0,.1); cursor: default;}
 
-section.notes article.note.white:before{content:""; display:inline-block; height:6px; background-color: #fff; width:100%; position:relative; top:-9px;}
-section.notes article.note.red:before{content:""; display:inline-block; height:6px; background-color: red; width:100%; position:relative; top:-9px;}
-section.notes article.note.blue:before{content:""; display:inline-block; height:6px; background-color: blue; width:100%; position:relative; top:-9px;}
-section.notes article.note.purple:before{content:""; display:inline-block; height:6px; background-color: purple; width:100%; position:relative; top:-9px;}
-section.notes article.note.green:before{content:""; display:inline-block; height:6px; background-color: green; width:100%; position:relative; top:-9px;}
+
+
+div.notes{width:700px; margin:20px auto 0; padding:15px 15px 0;}
+div.notes article.note{transition: opacity 1s; -webkit-transition: opacity 1s;}
+
+div.notes article.note.white:before{content:""; display:inline-block; height:6px; background-color: #fff; width:100%; position:relative; top:-9px;}
+div.notes article.note.red:before{content:""; display:inline-block; height:6px; background-color: red; width:100%; position:relative; top:-9px;}
+div.notes article.note.blue:before{content:""; display:inline-block; height:6px; background-color: blue; width:100%; position:relative; top:-9px;}
+div.notes article.note.purple:before{content:""; display:inline-block; height:6px; background-color: purple; width:100%; position:relative; top:-9px;}
+div.notes article.note.green:before{content:""; display:inline-block; height:6px; background-color: green; width:100%; position:relative; top:-9px;}
 
 article.note form input{border: 1px dotted #eee;}
 article.note form input:focus{outline: none;}
 article.note form textarea{border: 1px dotted #eee;}
 article.note form textarea:focus{outline: none;}
 
-section.notes article.note{border:1px solid #ccc; margin-bottom: 30px; background-color: #fff; position: relative;}
-section.notes article.note:hover{border-left:1px solid blue; margin-bottom: 30px; background-color: #fff;}
+div.notes article.note{border:1px solid #ccc; margin-bottom: 30px; background-color: #fff; position: relative;}
+div.notes article.note:hover{border-left:1px solid blue; margin-bottom: 30px; background-color: #fff;}
+
 article.note h1{margin:15px 25px 0; font-size: 1.1em; font-weight: normal;}
 article.note p{font-size: 0.9em; padding: 10px 25px;}
 article.note p.date{padding:15px 25px; border-top: 1px dashed #ccc; color:#999; margin:0;}
@@ -109,6 +121,25 @@ article.note a.pickColor{opacity:0; position:absolute; top: 10px; right: -32px; 
 article.note a.pickColor:before{content:""; position:absolute; left:-7px; top:6px; display: inline-block; width: 0; height: 0; border-right:7px solid #ccc; border-top:10px solid transparent; border-bottom:10px solid transparent;}
 article.note a.pickColor:after{content:""; position:absolute; left:-6px; top:6px; display: inline-block; width: 0; height: 0; border-right:7px solid #fff; border-top:10px solid transparent; border-bottom:10px solid transparent;}
 
+
+
+div.notesGrid{width:900px; margin:0 auto;}
+article.noteGrid{ position: relative; width:205px; margin:0 10px 10px;  height: 250px; float: left; border: 1px solid #ccc; background-color: #fff;}
+article.noteGrid h1{margin:15px 25px 0; font-size: 1.1em; font-weight: normal; word-break: break-all;}
+article.noteGrid p{font-size: 0.9em; padding: 10px 25px; word-break: break-all;}
+article.noteGrid p.date{position: absolute; bottom: 0; right: 0; width: 205px; padding:15px 25px; border-top: 1px dashed #ccc; color:#999; margin:0;}
+
+article.noteGrid ul{list-style: none; margin: 15px 0 0; padding: 0;}
+article.noteGrid ul li{margin: 0; height:30px;}
+article.noteGrid ul li p{margin: 0;}
+article.noteGrid ul li.done p{text-decoration: line-through; color: #ccc;}
+
+
+article.noteGrid.white:before{content:""; display:inline-block; height:6px; background-color: #fff; width:100%; position:relative; top:-9px;}
+article.noteGrid.red:before{content:""; display:inline-block; height:6px; background-color: red; width:100%; position:relative; top:-9px;}
+article.noteGrid.blue:before{content:""; display:inline-block; height:6px; background-color: blue; width:100%; position:relative; top:-9px;}
+article.noteGrid.purple:before{content:""; display:inline-block; height:6px; background-color: purple; width:100%; position:relative; top:-9px;}
+article.noteGrid.green:before{content:""; display:inline-block; height:6px; background-color: green; width:100%; position:relative; top:-9px;}
 
 
 
